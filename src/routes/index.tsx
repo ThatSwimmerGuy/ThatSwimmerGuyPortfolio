@@ -1,0 +1,96 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import heroImg from "@/assets/hero-stem.jpg";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Beaker, Code, Lightbulb } from "lucide-react";
+
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "STEM Portfolio — Home" },
+      { name: "description", content: "Documenting Essential Skills practiced throughout the STEM Academy." },
+      { property: "og:title", content: "STEM Portfolio — Home" },
+      { property: "og:description", content: "Background, interests, and capstone work from a STEM Academy student." },
+    ],
+  }),
+  component: Home,
+});
+
+function Home() {
+  return (
+    <>
+      <section className="relative overflow-hidden">
+        <img
+          src={heroImg}
+          alt=""
+          width={1600}
+          height={900}
+          className="absolute inset-0 h-full w-full object-cover opacity-90"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-background" />
+        <div className="relative mx-auto max-w-6xl px-4 py-28 md:py-40">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">STEM Academy Portfolio</p>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-primary-foreground max-w-3xl">
+            Hi, I'm <span className="text-accent">Your Name</span>.
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg md:text-xl text-primary-foreground/85">
+            A STEM Academy student documenting four years of learning, building, and discovery — from coursework
+            and capstone to internships and the Essential Skills that tie it all together.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Link to="/capstone-project">
+                View Capstone <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="bg-background/10 text-primary-foreground border-primary-foreground/30 hover:bg-background/20">
+              <Link to="/coursework">Coursework</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-20">
+        <div className="grid gap-10 md:grid-cols-2">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">About Me</p>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">Background &amp; Interests</h2>
+            <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Write a few paragraphs introducing yourself here. Share where you're from, what drew you to the
+                STEM Academy, and the moments that sparked your curiosity in science, technology, engineering,
+                or math.
+              </p>
+              <p>
+                Talk about the subjects, projects, or problems that excite you most. What do you love building,
+                experimenting with, or learning about outside of class? Mention clubs, sports, volunteer work,
+                or hobbies that have shaped who you are.
+              </p>
+              <p>
+                Close with where you see yourself heading next — the colleges, majors, or careers you're
+                considering, and how the STEM Academy has prepared you for that path.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 content-start">
+            {[
+              { icon: Beaker, title: "Curious", body: "Driven by questions and experiments." },
+              { icon: Code, title: "Builder", body: "I love turning ideas into things that work." },
+              { icon: Lightbulb, title: "Creative", body: "Finding new angles on hard problems." },
+              { icon: ArrowRight, title: "Forward", body: "Always learning what's next." },
+            ].map(({ icon: Icon, title, body }) => (
+              <div
+                key={title}
+                className="rounded-xl border border-border bg-card p-5 shadow-[var(--shadow-card)]"
+              >
+                <Icon className="h-6 w-6 text-primary" />
+                <h3 className="mt-3 font-semibold text-foreground">{title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
