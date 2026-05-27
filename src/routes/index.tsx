@@ -30,7 +30,7 @@ function Home() {
         <div className="relative mx-auto max-w-6xl px-4 py-28 md:py-40">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">STEM Academy Portfolio</p>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-primary-foreground max-w-3xl">
-            Hi, I'm <span className="text-accent">Your Name</span>.
+            Hi, I'm <span className="text-accent">Markus Nina</span>.
           </h1>
           <p className="mt-6 max-w-2xl text-lg md:text-xl text-primary-foreground/85">
             A STEM Academy student documenting four years of learning, building, and discovery — from coursework
@@ -56,18 +56,23 @@ function Home() {
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">Background &amp; Interests</h2>
             <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Write a few paragraphs introducing yourself here. Share where you're from, what drew you to the
-                STEM Academy, and the moments that sparked your curiosity in science, technology, engineering,
-                or math.
+              I am Markus Nina, and I am a student in high school. I am interested 
+              in computer science, computer engineering, and game development. I like
+              studying about technologies and their implementation and see how
+              software and hardware merge into one thing.
               </p>
               <p>
-                Talk about the subjects, projects, or problems that excite you most. What do you love building,
-                experimenting with, or learning about outside of class? Mention clubs, sports, volunteer work,
-                or hobbies that have shaped who you are.
+              One of my interests is programming and development. Some
+              programming languages I have worked with include Java, as well as
+              some knowledge of C#. I have worked with markup languages, such as
+              HTML and CSS. With the help of these skills, I could work on some
+              personal projects related to programming and development. These 
+              projects include development of various games and websites, among others.
               </p>
               <p>
-                Close with where you see yourself heading next — the colleges, majors, or careers you're
-                considering, and how the STEM Academy has prepared you for that path.
+              The goals I would like to accomplish in the future involve learning more
+               about technologies, specifically programming and development, and
+               finding opportunities connected with software engineering and game development.
               </p>
             </div>
           </div>
