@@ -35,10 +35,7 @@ function Internship() {
             <div>
               <h2 className="text-2xl font-bold text-foreground">What I Did</h2>
               <p className="mt-3 text-muted-foreground leading-relaxed">
-                Write a paragraph describing your internship: where you interned, the team you joined, the
-                projects you contributed to, the tools and techniques you used, and what you took away from
-                the experience. If you did not complete an internship, you can delete this tab from the
-                navigation in <code className="rounded bg-secondary px-1.5 py-0.5 text-xs">src/components/SiteHeader.tsx</code>.
+                None
               </p>
             </div>
           </div>
@@ -49,7 +46,7 @@ function Internship() {
         <h2 className="text-xl font-semibold text-foreground mb-5">Gallery</h2>
         {gallery.length === 0 ? (
           <div className="rounded-xl border-2 border-dashed border-border bg-card p-10 text-center text-sm text-muted-foreground">
-            Add photos, slide decks, or data visualizations from your internship by editing the
+            Add photos, slide decks, or data visualizations
             <code className="mx-1 rounded bg-secondary px-1.5 py-0.5">gallery</code> array in
             <code className="mx-1 rounded bg-secondary px-1.5 py-0.5">src/routes/internship.tsx</code>.
           </div>
